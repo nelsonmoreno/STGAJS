@@ -1,0 +1,82 @@
+
+<div ng-controller="AppCtrl" layout="column" style="height:500px;" class="sidenavdemoBasicUsage">
+
+  <section layout="row" flex="">
+
+
+
+   <md-content flex="" layout-fill="" class="md-default-theme">
+
+      <div layout="column" layout-fill="" layout-align="top center">
+        <div layout="column" layout-align="center center" class="toolbardemoBasicUsage">
+          <md-toolbar class="color md-default-theme" style="background-color: #00695c;color:#FFFFFF">
+            <div class="md-toolbar-tools">
+              <md-button class="md-icon-button" aria-label="Settings" ng-click="toggleLeft()">
+                  <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+              </md-button>
+              <h2>
+                <span>Menú</span>
+              </h2>
+              <span flex=""></span>
+              <md-button class="md-icon-button" aria-label="Favorite">
+                <md-icon md-svg-icon="img/icons/favorite.svg" style="color: greenyellow;"></md-icon>
+              </md-button>
+              <md-button class="md-icon-button" aria-label="More">
+                <md-icon md-svg-icon="img/icons/more_vert.svg"></md-icon>
+              </md-button>
+            </div>
+          </md-toolbar>
+          <div layout="column" layout-fill="" style="padding-bottom: 32px;" class="color dark">
+
+            <div  flex="" class="gridListdemoDynamicTiles" >
+              <md-grid-list md-cols-sm="1" md-cols-md="2" md-cols-gt-md="6" md-row-height-gt-md="1:1" md-row-height="4:3" md-gutter="8px" md-gutter-gt-sm="4px">
+
+                <md-grid-tile ng-repeat="tile in tiles" md-rowspan="{{tile.span.row}}" md-colspan="{{tile.span.col}}" md-colspan-sm="1" ng-class="tile.background">
+                  <md-icon md-svg-icon="{{tile.icon}}"></md-icon>
+                  <div ng-if="tile.icon!=null"><img ng-src="{{tile.icon}}"/></div>
+                  <md-grid-tile-footer><h3>{{tile.title}}</h3></md-grid-tile-footer>
+                </md-grid-tile>
+              </md-grid-list>
+            </div>
+
+
+            </div>
+            </div>
+          </div>
+      </div>
+
+      <div flex=""></div>
+
+    </md-content>
+
+    <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left">
+
+      <md-toolbar class="md-theme-light">
+        <h1 class="md-toolbar-tools">Opciones</h1>
+      </md-toolbar>
+      <md-content ng-controller="MainCtrl" layout="column"  layout-align="center start" layout-padding="">
+        <form>
+          <md-input-container>
+            <label for="testInput">Test input</label>
+            <input type="text" id="testInput" ng-model="data" md-sidenav-focus="">
+          </md-input-container>
+        </form>
+        <md-button ng-click="close()" class="md-primary">
+          Añadir merito
+        </md-button>
+        <md-button ng-click="close()" class="md-primary">
+          Consultar puntos
+        </md-button>
+        <md-button ng-click="close()" class="md-primary">
+          Escribir comentario
+        </md-button>
+        <md-button ng-click="close()" class="md-primary">
+          Cerrar sesión
+        </md-button>
+      </md-content>
+
+    </md-sidenav>
+
+  </section>
+
+</div>

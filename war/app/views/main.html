@@ -1,0 +1,129 @@
+<!--<div layout="column" layout-align="center center" class="toolbardemoBasicUsage">
+  <md-toolbar class="color" style="background-color: #00695c;color:#FFFFFF">
+    <div class="md-toolbar-tools">
+      <md-button class="md-icon-button" aria-label="Settings">
+        <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+      </md-button>
+      <h2>
+        <span>Toolbar with Icon Buttons</span>
+      </h2>
+      <span flex></span>
+      <md-button class="md-icon-button" aria-label="Favorite">
+        <md-icon md-svg-icon="img/icons/favorite.svg" style="color: greenyellow;"></md-icon>
+      </md-button>
+      <md-button class="md-icon-button" aria-label="More">
+        <md-icon md-svg-icon="img/icons/more_vert.svg"></md-icon>
+      </md-button>
+    </div>
+  </md-toolbar>
+  <!--<md-toolbar>
+    <div class="md-toolbar-tools" layout-align="center center" class="color dark" style="background-color: #eeeeee;">
+      <md-button><p  class="md-caption">¿Qué es STG?</p></md-button>
+      <md-button><p  class="md-caption">Cómo se obtienen?</p></md-button>
+      <md-button><p  class="md-caption">Comentario</p></md-button>
+      <md-button> <small class="md-caption">Oferta</small></md-button>
+    </div>
+  </md-toolbar>--><!--
+  <div layout="column" layout-fill="" style="padding-bottom: 32px;" class="color dark" style="background-color: #b9f6ca;" ng-app="MyApp">
+
+    <div flex layout="row" layout-align="center center" class="color dark" style="background-color: #A2CC29;color:#FFFFFF">
+      <h1 class="md-display-1">Investigación</h1>
+    </div>
+    <div flex layout="row" layout-align="center center" class="color dark" style="background-color: #72BB37;color:#FFFFFF">
+      <h1 class="md-display-1">Diseño</h1>
+    </div>
+    <div flex layout="row" layout-align="center center" class="color dark" style="background-color: #438941;color:#FFFFFF">
+      <h1 class="md-display-1">Formación</h1>
+    </div>
+      <div flex layout="row" layout-align="center center" class="color dark" style="background-color: #205759;color:#FFFFFF">
+        <h1 class="md-display-1">Social</h1>
+    </div>
+    </div>
+  </div>-->
+  <div ng-controller="AppCtrl" layout="column" style="height:500px;" class="sidenavdemoBasicUsage" ng-app="MyApp">
+
+    <section layout="row" flex="">
+
+
+
+     <md-content flex="" layout-fill="" class="md-default-theme">
+
+        <div layout="column" layout-fill="" layout-align="top center">
+          <div layout="column" layout-align="center center" class="toolbardemoBasicUsage">
+            <md-toolbar class="color md-default-theme" style="background-color: #00695c;color:#FFFFFF">
+              <div class="md-toolbar-tools">
+                <md-button class="md-icon-button" aria-label="Settings" ng-click="toggleLeft()">
+                    <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+                </md-button>
+                <h2>
+                  <span>Menú</span>
+                </h2>
+                <span flex=""></span>
+                <md-button class="md-icon-button" aria-label="Favorite">
+                  <md-icon md-svg-icon="img/icons/favorite.svg" style="color: greenyellow;"></md-icon>
+                </md-button>
+                <md-button class="md-icon-button" aria-label="More">
+                  <md-icon md-svg-icon="img/icons/more_vert.svg"></md-icon>
+                </md-button>
+              </div>
+            </md-toolbar>
+            <md-toolbar>
+              <div class="md-toolbar-tools" layout-align="center center" class="color dark" style="background-color: #eeeeee;">
+                <md-button><p  class="md-caption">¿Qué es STG?</p></md-button>
+                <md-button><p  class="md-caption">¿Cómo se obtienen?</p></md-button>
+                <md-button ng-click="go('/oferta');"> <small class="md-caption">Ver oferta</small></md-button>
+              </div>
+            </md-toolbar>
+            <div layout="column" layout-fill="" style="padding-bottom: 32px;" class="color dark">
+
+              <div flex="" layout="row" layout-align="center center" class="color dark" style="background-color: #A2CC29;color:#FFFFFF">
+                <h1 class="md-display-1">Investigación</h1>
+              </div>
+              <div flex="" layout="row" layout-align="center center" class="color dark" style="background-color: #72BB37;color:#FFFFFF">
+                <h1 class="md-display-1">Diseño</h1>
+              </div>
+              <div flex="" layout="row" layout-align="center center" class="color dark" style="background-color: #438941;color:#FFFFFF">
+                <h1 class="md-display-1">Formación</h1>
+              </div>
+                <div flex="" layout="row" layout-align="center center" class="color dark" style="background-color: #205759;color:#FFFFFF">
+                  <h1 class="md-display-1">Social</h1>
+              </div>
+              </div>
+            </div>
+        </div>
+
+        <div flex=""></div>
+
+      </md-content>
+
+      <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left">
+
+        <md-toolbar class="md-theme-light">
+          <h1 class="md-toolbar-tools">Opciones</h1>
+        </md-toolbar>
+        <md-content ng-controller="MainCtrl" layout="column"  layout-align="center start" layout-padding="">
+          <form>
+            <md-input-container>
+              <label for="testInput">Test input</label>
+              <input type="text" id="testInput" ng-model="data" md-sidenav-focus="">
+            </md-input-container>
+          </form>
+          <md-button ng-click="close()" class="md-primary">
+            Añadir merito
+          </md-button>
+          <md-button ng-click="close()" class="md-primary">
+            Consultar puntos
+          </md-button>
+          <md-button ng-click="close()" class="md-primary">
+            Escribir comentario
+          </md-button>
+          <md-button ng-click="close()" class="md-primary">
+            Cerrar sesión
+          </md-button>
+        </md-content>
+
+      </md-sidenav>
+
+    </section>
+
+  </div>

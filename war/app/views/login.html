@@ -1,0 +1,25 @@
+
+<div flex layout="column" layout-align="center center" style="height: 100%">
+<img src="/img/icons/html5.svg" alt="login" height="128" width="128">
+  <br>
+  <md-content layout-padding="2" class="autoScroll">
+
+    <md-input-container class="md-icon-float">
+      <!-- Use floating label instead of placeholder -->
+      <label>usuario</label>
+      <md-icon md-svg-src="img/icons/ic_person_24px.svg" class="name"></md-icon>
+      <input ng-model="user.name" type="text" placeholder="usuario">
+    </md-input-container>
+
+    <md-input-container class="md-icon-float">
+      <md-icon md-svg-src="img/icons/cake.svg" class="name"></md-icon>
+      <input ng-model="user.phone" type="password" placeholder="contraseña">
+    </md-input-container>
+
+    <section layout="row" layout-sm="column" layout-align="center center">
+      <md-button class="md-accent md-raised md-primary" ng-click="go('/home')">entrar</md-button>
+      <md-button class="md-accent md-raised md-hue-1" ng-click="go('/registro')">registrarce</md-button>
+    </section>
+  </md-content>
+
+</div>
